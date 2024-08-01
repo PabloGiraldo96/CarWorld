@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Ceviche+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Shadows+Into+Light&display=swap");
+
 body,
 html {
   margin: 0;
@@ -18,4 +20,31 @@ html {
     #e44900,
     #dc2f02
   );
+}
+
+.wasd {
+  position: absolute;
+  left: 50px;
+  top: 240px;
+  width: 100px;
+  height: 80px;
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 800;
+  border-radius: 50%;
+  font-size: 22px;
+  will-change: transform;
+  transform: translateY(2px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+  transition: filter 250ms;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.restart {
+  font-size: 30px;
+  position: absolute;
+  right: 10px;
+  top: 250px;
+  width: 100px;
+  height: 80px;
+  font-family: "Shadows Into Light", cursive;
 }

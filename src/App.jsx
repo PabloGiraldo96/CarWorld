@@ -4,7 +4,7 @@ import { Canvas } from "@react-three/fiber";
 import { Experience } from "./components/Experience";
 import { Physics } from "@react-three/rapier";
 import { Suspense, useMemo } from "react";
-import { KeyboardControls } from "@react-three/drei";
+import { KeyboardControls, Html } from "@react-three/drei";
 import { NewCarTowersScene } from "./components/NewCarTowersScene";
 
 export const Controls = {
@@ -43,16 +43,22 @@ function App() {
   );
 
   return (
-    <KeyboardControls map={map}>
-      <Canvas shadows camera={{ position: [2, 10, 15], fov: 50 }}>
-        <Suspense>
-          <Physics gravity={[0, -35, 0]}>
-            <Experience />
-            <NewCarTowersScene />
-          </Physics>
-        </Suspense>
-      </Canvas>
-    </KeyboardControls>
+    <>
+      <KeyboardControls map={map}>
+        <Canvas shadows camera={{ position: [2, 10, 15], fov: 50 }}>
+          <Suspense>
+            <Physics gravity={[0, -35, 0]}>
+              <Experience />
+              <NewCarTowersScene />
+            </Physics>
+          </Suspense>
+          <Html position={[0, 0, 0]}>
+            <div className="wasd">W S A D </div>
+            <div className="restart"> R to restart </div>
+          </Html>
+        </Canvas>
+      </KeyboardControls>
+    </>
   );
 }
 
