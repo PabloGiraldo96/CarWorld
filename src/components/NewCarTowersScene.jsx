@@ -134,415 +134,401 @@ export function NewCarTowersScene(props) {
   };
 
   return (
-    <>
-      <group {...props} dispose={null}>
-        <group
-          position={[-63.388, 27.892, -61.502]}
-          rotation={[0, 0.473, 0]}
-          scale={1.719}
-        >
-          <group scale={6.282}>
-            <mesh
-              geometry={nodes.Mesh_body014.geometry}
-              material={materials.paintRed}
-            />
-            <mesh
-              geometry={nodes.Mesh_body014_1.geometry}
-              material={materials.plastic}
-            />
-            <mesh
-              geometry={nodes.Mesh_body014_2.geometry}
-              material={materials.window}
-            />
-            <mesh
-              geometry={nodes.Mesh_body014_3.geometry}
-              material={materials._defaultMat}
-            />
-          </group>
-          <group scale={6.282}>
-            <mesh
-              geometry={nodes.Mesh_wheel_frontLeft028.geometry}
-              material={materials["carTire.014"]}
-            />
-            <mesh
-              geometry={nodes.Mesh_wheel_frontLeft028_1.geometry}
-              material={materials["plastic.015"]}
-            />
-            <mesh
-              geometry={nodes.Mesh_wheel_frontLeft028_2.geometry}
-              material={materials.paintYellow}
-            />
-          </group>
-          <group scale={6.282}>
-            <mesh
-              geometry={nodes.Mesh_wheel_frontLeft029.geometry}
-              material={materials["carTire.014"]}
-            />
-            <mesh
-              geometry={nodes.Mesh_wheel_frontLeft029_1.geometry}
-              material={materials["plastic.015"]}
-            />
-            <mesh
-              geometry={nodes.Mesh_wheel_frontLeft029_2.geometry}
-              material={materials.paintYellow}
-            />
-          </group>
-          <group scale={6.282}>
-            <mesh
-              geometry={nodes.Mesh_wheel_frontLeft030.geometry}
-              material={materials["carTire.014"]}
-            />
-            <mesh
-              geometry={nodes.Mesh_wheel_frontLeft030_1.geometry}
-              material={materials["plastic.015"]}
-            />
-            <mesh
-              geometry={nodes.Mesh_wheel_frontLeft030_2.geometry}
-              material={materials.paintYellow}
-            />
-          </group>
-          <group scale={6.282}>
-            <mesh
-              geometry={nodes.Mesh_wheel_frontLeft011.geometry}
-              material={materials["carTire.014"]}
-            />
-            <mesh
-              geometry={nodes.Mesh_wheel_frontLeft011_1.geometry}
-              material={materials["plastic.015"]}
-            />
-            <mesh
-              geometry={nodes.Mesh_wheel_frontLeft011_2.geometry}
-              material={materials.paintYellow}
-            />
-          </group>
-        </group>
-        <group position={[5.141, 0, -7.168]} scale={13.507}>
+    <group {...props} dispose={null}>
+      <group
+        position={[-63.388, 27.892, -61.502]}
+        rotation={[0, 0.473, 0]}
+        scale={1.719}
+      >
+        <group scale={6.282}>
           <mesh
-            geometry={nodes.Group_23.geometry}
-            material={materials["wood.001"]}
-            position={[-0.665, 0, 0.607]}
-            scale={[0.79, 0.6, 0.79]}
+            geometry={nodes.Mesh_body014.geometry}
+            material={materials.paintRed}
           />
           <mesh
-            geometry={nodes.Group_25.geometry}
-            material={materials["leaves.001"]}
-            position={[0, 1.327, 0]}
-            scale={0.573}
+            geometry={nodes.Mesh_body014_1.geometry}
+            material={materials.plastic}
+          />
+          <mesh
+            geometry={nodes.Mesh_body014_2.geometry}
+            material={materials.window}
+          />
+          <mesh
+            geometry={nodes.Mesh_body014_3.geometry}
+            material={materials._defaultMat}
           />
         </group>
-        <RigidBody
-          type="kinematicPositionBased"
-          colliders="hull"
-          ref={carRef}
-          mass={100}
-          friction={0.2}
-          restitution={0.3}
-        >
-          <group position={[5.678, 1.271, -57.844]} scale={0.134}>
-            <group ref={cameraTarget} position-z={7.5} />
-            <group ref={cameraPosition} position-y={10} position-z={-60} />
+        <group scale={6.282}>
+          <mesh
+            geometry={nodes.Mesh_wheel_frontLeft028.geometry}
+            material={materials["carTire.014"]}
+          />
+          <mesh
+            geometry={nodes.Mesh_wheel_frontLeft028_1.geometry}
+            material={materials["plastic.015"]}
+          />
+          <mesh
+            geometry={nodes.Mesh_wheel_frontLeft028_2.geometry}
+            material={materials.paintYellow}
+          />
+        </group>
+        <group scale={6.282}>
+          <mesh
+            geometry={nodes.Mesh_wheel_frontLeft029.geometry}
+            material={materials["carTire.014"]}
+          />
+          <mesh
+            geometry={nodes.Mesh_wheel_frontLeft029_1.geometry}
+            material={materials["plastic.015"]}
+          />
+          <mesh
+            geometry={nodes.Mesh_wheel_frontLeft029_2.geometry}
+            material={materials.paintYellow}
+          />
+        </group>
+        <group scale={6.282}>
+          <mesh
+            geometry={nodes.Mesh_wheel_frontLeft030.geometry}
+            material={materials["carTire.014"]}
+          />
+          <mesh
+            geometry={nodes.Mesh_wheel_frontLeft030_1.geometry}
+            material={materials["plastic.015"]}
+          />
+          <mesh
+            geometry={nodes.Mesh_wheel_frontLeft030_2.geometry}
+            material={materials.paintYellow}
+          />
+        </group>
+        <group scale={6.282}>
+          <mesh
+            geometry={nodes.Mesh_wheel_frontLeft011.geometry}
+            material={materials["carTire.014"]}
+          />
+          <mesh
+            geometry={nodes.Mesh_wheel_frontLeft011_1.geometry}
+            material={materials["plastic.015"]}
+          />
+          <mesh
+            geometry={nodes.Mesh_wheel_frontLeft011_2.geometry}
+            material={materials.paintYellow}
+          />
+        </group>
+      </group>
+      <group position={[5.141, 0, -7.168]} scale={13.507}>
+        <mesh
+          geometry={nodes.Group_23.geometry}
+          material={materials["wood.001"]}
+          position={[-0.665, 0, 0.607]}
+          scale={[0.79, 0.6, 0.79]}
+        />
+        <mesh
+          geometry={nodes.Group_25.geometry}
+          material={materials["leaves.001"]}
+          position={[0, 1.327, 0]}
+          scale={0.573}
+        />
+      </group>
+      <RigidBody
+        type="kinematicPositionBased"
+        colliders="hull"
+        ref={carRef}
+        mass={100}
+        friction={0.2}
+        restitution={0.3}
+      >
+        <group position={[5.678, 1.271, -57.844]} scale={0.134}>
+          <group ref={cameraTarget} position-z={7.5} />
+          <group ref={cameraPosition} position-y={10} position-z={-60} />
 
-            <mesh
-              geometry={nodes.Cylinder018_Cylinder007.geometry}
-              material={materials.Car}
-            />
-            <mesh
-              geometry={nodes.Cylinder018_Cylinder007_1.geometry}
-              material={materials.Windshield}
-            />
-            <mesh
-              geometry={nodes.Cylinder018_Cylinder007_2.geometry}
-              material={materials["Material.023"]}
-            />
-            <mesh
-              geometry={nodes.Cylinder018_Cylinder007_3.geometry}
-              material={materials["Material.024"]}
-            />
-          </group>
-        </RigidBody>
-        <group
-          position={[-88.391, 7.452, 105.52]}
-          rotation={[-0.603, 0.644, 0]}
-          scale={0.666}
-        >
           <mesh
-            geometry={nodes.Cylinder018_Cylinder001.geometry}
+            geometry={nodes.Cylinder018_Cylinder007.geometry}
             material={materials.Car}
           />
           <mesh
-            geometry={nodes.Cylinder018_Cylinder001_1.geometry}
+            geometry={nodes.Cylinder018_Cylinder007_1.geometry}
             material={materials.Windshield}
+          />
+          <mesh
+            geometry={nodes.Cylinder018_Cylinder007_2.geometry}
+            material={materials["Material.023"]}
+          />
+          <mesh
+            geometry={nodes.Cylinder018_Cylinder007_3.geometry}
+            material={materials["Material.024"]}
+          />
+        </group>
+      </RigidBody>
+      <group
+        position={[-88.391, 7.452, 105.52]}
+        rotation={[-0.603, 0.644, 0]}
+        scale={0.666}
+      >
+        <mesh
+          geometry={nodes.Cylinder018_Cylinder001.geometry}
+          material={materials.Car}
+        />
+        <mesh
+          geometry={nodes.Cylinder018_Cylinder001_1.geometry}
+          material={materials.Windshield}
+        />
+      </group>
+      <mesh
+        geometry={nodes.rocksA_desert.geometry}
+        material={materials["BrownDark.013"]}
+        position={[95.886, 0.288, 23.033]}
+        rotation={[Math.PI / 2, 0, 0]}
+        scale={16.732}
+      />
+      <group
+        position={[-63.499, 13.978, 74.79]}
+        rotation={[0.289, 0.064, 0.837]}
+        scale={5.538}
+      >
+        <mesh
+          geometry={nodes.ship_wreck_8angles_1.geometry}
+          material={materials["wood.020"]}
+        />
+        <mesh
+          geometry={nodes.ship_wreck_8angles_2.geometry}
+          material={materials["iron.010"]}
+        />
+        <mesh
+          geometry={nodes.ship_wreck_8angles_3.geometry}
+          material={materials["woodDark.002"]}
+        />
+        <mesh
+          geometry={nodes.ship_wreck_8angles_4.geometry}
+          material={materials["window.002"]}
+        />
+        <mesh
+          geometry={nodes.ship_wreck_8angles_5.geometry}
+          material={materials["leaves.006"]}
+        />
+        <mesh
+          geometry={nodes.ship_wreck_8angles_6.geometry}
+          material={materials["_defaultMat.004"]}
+        />
+      </group>
+      <group
+        position={[102.2, 0.17, -72.414]}
+        rotation={[-Math.PI, 1.036, -Math.PI]}
+        scale={8.2}
+      >
+        <mesh
+          geometry={nodes.tower_1.geometry}
+          material={materials["stone.006"]}
+        />
+        <mesh
+          geometry={nodes.tower_2.geometry}
+          material={materials["woodDark.003"]}
+        />
+        <mesh
+          geometry={nodes.tower_3.geometry}
+          material={materials["_defaultMat.007"]}
+        />
+        <mesh
+          geometry={nodes.tower_4.geometry}
+          material={materials["iron.011"]}
+        />
+        <mesh
+          geometry={nodes.tower_5.geometry}
+          material={materials["wood.024"]}
+        />
+        <mesh
+          geometry={nodes.tower_6.geometry}
+          material={materials["sand.006"]}
+        />
+        <mesh
+          geometry={nodes.tower_7.geometry}
+          material={materials["textile.008"]}
+        />
+      </group>
+      <group
+        position={[75.478, 30.256, 97.122]}
+        rotation={[Math.PI / 2, 0, 3.08]}
+        scale={6.735}
+      >
+        <mesh
+          geometry={nodes.Cube020.geometry}
+          material={materials["Purple.008"]}
+        />
+        <mesh
+          geometry={nodes.Cube020_1.geometry}
+          material={materials["Black.019"]}
+        />
+        <mesh
+          geometry={nodes.Cube020_2.geometry}
+          material={materials["Yellow.010"]}
+        />
+        <mesh
+          geometry={nodes.Cube020_3.geometry}
+          material={materials["GreenLight.003"]}
+        />
+        <group position={[0.204, 0, -0.634]}>
+          <mesh
+            geometry={nodes.Cube018.geometry}
+            material={materials["GreenLight.003"]}
+          />
+          <mesh
+            geometry={nodes.Cube018_1.geometry}
+            material={materials["Purple.008"]}
+          />
+        </group>
+        <group position={[-0.204, 0, -0.634]}>
+          <mesh
+            geometry={nodes.Cube019.geometry}
+            material={materials["Purple.008"]}
+          />
+          <mesh
+            geometry={nodes.Cube019_1.geometry}
+            material={materials["GreenLight.003"]}
+          />
+        </group>
+        <group position={[0, 0, -0.704]}>
+          <mesh
+            geometry={nodes.Cube017.geometry}
+            material={materials["Black.019"]}
+          />
+          <mesh
+            geometry={nodes.Cube017_1.geometry}
+            material={materials["GreenLight.003"]}
+          />
+          <mesh
+            geometry={nodes.Cube017_2.geometry}
+            material={materials["Green.003"]}
+          />
+          <group position={[0, -0.071, -0.768]} rotation={[-0.264, 0, 0]}>
+            <mesh
+              geometry={nodes.Cube016.geometry}
+              material={materials["Purple.008"]}
+            />
+            <mesh
+              geometry={nodes.Cube016_1.geometry}
+              material={materials["Black.019"]}
+            />
+            <mesh
+              geometry={nodes.Cube016_2.geometry}
+              material={materials["Yellow.010"]}
+            />
+          </group>
+        </group>
+      </group>
+      <mesh
+        geometry={nodes.treeD_graveyard.geometry}
+        material={materials["DarkWood.015"]}
+        position={[-36.944, 0.387, -38.595]}
+        scale={6.693}
+      />
+      <RigidBody type="fixed" colliders="trimesh" restitution={0.4}>
+        <group
+          position={[-91.01, 0.17, 14.156]}
+          rotation={[0, -1.227, 0]}
+          scale={8.2}
+        >
+          <mesh
+            geometry={nodes.tower001_1.geometry}
+            material={materials["stone.006"]}
+          />
+          <mesh
+            geometry={nodes.tower001_2.geometry}
+            material={materials["woodDark.003"]}
+          />
+          <mesh
+            geometry={nodes.tower001_3.geometry}
+            material={materials["_defaultMat.007"]}
+          />
+          <mesh
+            geometry={nodes.tower001_4.geometry}
+            material={materials["iron.011"]}
+          />
+          <mesh
+            geometry={nodes.tower001_5.geometry}
+            material={materials["wood.024"]}
+          />
+          <mesh
+            geometry={nodes.tower001_6.geometry}
+            material={materials["sand.006"]}
+          />
+          <mesh
+            geometry={nodes.tower001_7.geometry}
+            material={materials["textile.008"]}
           />
         </group>
         <mesh
-          geometry={nodes.rocksA_desert.geometry}
+          geometry={nodes.rocksA_desert001.geometry}
           material={materials["BrownDark.013"]}
           position={[95.886, 0.288, 23.033]}
           rotation={[Math.PI / 2, 0, 0]}
           scale={16.732}
         />
-        <group
-          position={[-63.499, 13.978, 74.79]}
-          rotation={[0.289, 0.064, 0.837]}
-          scale={5.538}
-        >
-          <mesh
-            geometry={nodes.ship_wreck_8angles_1.geometry}
-            material={materials["wood.020"]}
-          />
-          <mesh
-            geometry={nodes.ship_wreck_8angles_2.geometry}
-            material={materials["iron.010"]}
-          />
-          <mesh
-            geometry={nodes.ship_wreck_8angles_3.geometry}
-            material={materials["woodDark.002"]}
-          />
-          <mesh
-            geometry={nodes.ship_wreck_8angles_4.geometry}
-            material={materials["window.002"]}
-          />
-          <mesh
-            geometry={nodes.ship_wreck_8angles_5.geometry}
-            material={materials["leaves.006"]}
-          />
-          <mesh
-            geometry={nodes.ship_wreck_8angles_6.geometry}
-            material={materials["_defaultMat.004"]}
-          />
-        </group>
-        <group
-          position={[102.2, 0.17, -72.414]}
-          rotation={[-Math.PI, 1.036, -Math.PI]}
-          scale={8.2}
-        >
-          <mesh
-            geometry={nodes.tower_1.geometry}
-            material={materials["stone.006"]}
-          />
-          <mesh
-            geometry={nodes.tower_2.geometry}
-            material={materials["woodDark.003"]}
-          />
-          <mesh
-            geometry={nodes.tower_3.geometry}
-            material={materials["_defaultMat.007"]}
-          />
-          <mesh
-            geometry={nodes.tower_4.geometry}
-            material={materials["iron.011"]}
-          />
-          <mesh
-            geometry={nodes.tower_5.geometry}
-            material={materials["wood.024"]}
-          />
-          <mesh
-            geometry={nodes.tower_6.geometry}
-            material={materials["sand.006"]}
-          />
-          <mesh
-            geometry={nodes.tower_7.geometry}
-            material={materials["textile.008"]}
-          />
-        </group>
-        <group
-          position={[75.478, 30.256, 97.122]}
-          rotation={[Math.PI / 2, 0, 3.08]}
-          scale={6.735}
-        >
-          <mesh
-            geometry={nodes.Cube020.geometry}
-            material={materials["Purple.008"]}
-          />
-          <mesh
-            geometry={nodes.Cube020_1.geometry}
-            material={materials["Black.019"]}
-          />
-          <mesh
-            geometry={nodes.Cube020_2.geometry}
-            material={materials["Yellow.010"]}
-          />
-          <mesh
-            geometry={nodes.Cube020_3.geometry}
-            material={materials["GreenLight.003"]}
-          />
-          <group position={[0.204, 0, -0.634]}>
-            <mesh
-              geometry={nodes.Cube018.geometry}
-              material={materials["GreenLight.003"]}
-            />
-            <mesh
-              geometry={nodes.Cube018_1.geometry}
-              material={materials["Purple.008"]}
-            />
-          </group>
-          <group position={[-0.204, 0, -0.634]}>
-            <mesh
-              geometry={nodes.Cube019.geometry}
-              material={materials["Purple.008"]}
-            />
-            <mesh
-              geometry={nodes.Cube019_1.geometry}
-              material={materials["GreenLight.003"]}
-            />
-          </group>
-          <group position={[0, 0, -0.704]}>
-            <mesh
-              geometry={nodes.Cube017.geometry}
-              material={materials["Black.019"]}
-            />
-            <mesh
-              geometry={nodes.Cube017_1.geometry}
-              material={materials["GreenLight.003"]}
-            />
-            <mesh
-              geometry={nodes.Cube017_2.geometry}
-              material={materials["Green.003"]}
-            />
-            <group position={[0, -0.071, -0.768]} rotation={[-0.264, 0, 0]}>
-              <mesh
-                geometry={nodes.Cube016.geometry}
-                material={materials["Purple.008"]}
-              />
-              <mesh
-                geometry={nodes.Cube016_1.geometry}
-                material={materials["Black.019"]}
-              />
-              <mesh
-                geometry={nodes.Cube016_2.geometry}
-                material={materials["Yellow.010"]}
-              />
-            </group>
-          </group>
-        </group>
         <mesh
-          geometry={nodes.treeD_graveyard.geometry}
+          geometry={nodes.rocksA_desert002.geometry}
+          material={materials["BrownDark.013"]}
+          position={[-29.22, 0.288, -70.447]}
+          rotation={[Math.PI / 2, 0, 0]}
+          scale={16.732}
+        />
+        <mesh
+          geometry={nodes.treeD_graveyard001.geometry}
           material={materials["DarkWood.015"]}
-          position={[-36.944, 0.387, -38.595]}
+          position={[74.184, 0.387, -84.2]}
           scale={6.693}
         />
-        <RigidBody type="fixed" colliders="trimesh" restitution={0.4}>
-          <group
-            position={[-91.01, 0.17, 14.156]}
-            rotation={[0, -1.227, 0]}
-            scale={8.2}
-          >
-            <mesh
-              geometry={nodes.tower001_1.geometry}
-              material={materials["stone.006"]}
-            />
-            <mesh
-              geometry={nodes.tower001_2.geometry}
-              material={materials["woodDark.003"]}
-            />
-            <mesh
-              geometry={nodes.tower001_3.geometry}
-              material={materials["_defaultMat.007"]}
-            />
-            <mesh
-              geometry={nodes.tower001_4.geometry}
-              material={materials["iron.011"]}
-            />
-            <mesh
-              geometry={nodes.tower001_5.geometry}
-              material={materials["wood.024"]}
-            />
-            <mesh
-              geometry={nodes.tower001_6.geometry}
-              material={materials["sand.006"]}
-            />
-            <mesh
-              geometry={nodes.tower001_7.geometry}
-              material={materials["textile.008"]}
-            />
-          </group>
-          <mesh
-            geometry={nodes.rocksA_desert001.geometry}
-            material={materials["BrownDark.013"]}
-            position={[95.886, 0.288, 23.033]}
-            rotation={[Math.PI / 2, 0, 0]}
-            scale={16.732}
-          />
-          <mesh
-            geometry={nodes.rocksA_desert002.geometry}
-            material={materials["BrownDark.013"]}
-            position={[-29.22, 0.288, -70.447]}
-            rotation={[Math.PI / 2, 0, 0]}
-            scale={16.732}
-          />
-          <mesh
-            geometry={nodes.treeD_graveyard001.geometry}
-            material={materials["DarkWood.015"]}
-            position={[74.184, 0.387, -84.2]}
-            scale={6.693}
-          />
-          <mesh
-            geometry={nodes.treeD_graveyard002.geometry}
-            material={materials["DarkWood.015"]}
-            position={[-98.274, 0.387, 30.773]}
-            scale={6.693}
-          />
-          <mesh
-            geometry={nodes.treeD_graveyard003.geometry}
-            material={materials["DarkWood.015"]}
-            position={[13.063, 0.387, 45.968]}
-            scale={6.693}
-          />
-          <mesh
-            geometry={nodes.treeD_graveyard004.geometry}
-            material={materials["DarkWood.015"]}
-            position={[94.649, 0.387, 90.717]}
-            scale={6.693}
-          />
-          <mesh
-            geometry={nodes.Landscape001.geometry}
-            material={materials["Material.028"]}
-            position={[62.431, 0.499, -37.925]}
-            scale={57.011}
-          />
-          <mesh
-            geometry={nodes.Landscape006.geometry}
-            material={materials["Material.027"]}
-            position={[-50.95, 0.545, -37.993]}
-            scale={56.917}
-          />
-          <mesh
-            geometry={nodes.Landscape004.geometry}
-            material={materials.Material}
-            position={[62.468, 0.545, 74.899]}
-            rotation={[Math.PI, -0.004, Math.PI]}
-            scale={56.917}
-          />
+        <mesh
+          geometry={nodes.treeD_graveyard002.geometry}
+          material={materials["DarkWood.015"]}
+          position={[-98.274, 0.387, 30.773]}
+          scale={6.693}
+        />
+        <mesh
+          geometry={nodes.treeD_graveyard003.geometry}
+          material={materials["DarkWood.015"]}
+          position={[13.063, 0.387, 45.968]}
+          scale={6.693}
+        />
+        <mesh
+          geometry={nodes.treeD_graveyard004.geometry}
+          material={materials["DarkWood.015"]}
+          position={[94.649, 0.387, 90.717]}
+          scale={6.693}
+        />
+        <mesh
+          geometry={nodes.Landscape001.geometry}
+          material={materials["Material.028"]}
+          position={[62.431, 0.499, -37.925]}
+          scale={57.011}
+        />
+        <mesh
+          geometry={nodes.Landscape006.geometry}
+          material={materials["Material.027"]}
+          position={[-50.95, 0.545, -37.993]}
+          scale={56.917}
+        />
+        <mesh
+          geometry={nodes.Landscape004.geometry}
+          material={materials.Material}
+          position={[62.468, 0.545, 74.899]}
+          rotation={[Math.PI, -0.004, Math.PI]}
+          scale={56.917}
+        />
 
-          <group
-            position={[-50.762, 0.499, 75.192]}
-            rotation={[-Math.PI, 0.001, -Math.PI]}
-            scale={57.011}
-          >
-            <mesh
-              geometry={nodes.Landscape008.geometry}
-              material={materials["Material.026"]}
-            />
-            <mesh
-              geometry={nodes.Landscape008_1.geometry}
-              material={materials["Material.029"]}
-            />
-          </group>
-        </RigidBody>
-      </group>
-      <Html position={[0, -10, 0]}>
-        <button
-          onPointerDown={accelerate}
-          onPointerUp={stop}
-          className="buttonRight"
+        <group
+          position={[-50.762, 0.499, 75.192]}
+          rotation={[-Math.PI, 0.001, -Math.PI]}
+          scale={57.011}
         >
-          Speed
-        </button>
-        <button onPointerDown={brake} onPointerUp={stop} className="buttonLeft">
-          Brake
-        </button>
-      </Html>
-    </>
+          <mesh
+            geometry={nodes.Landscape008.geometry}
+            material={materials["Material.026"]}
+          />
+          <mesh
+            geometry={nodes.Landscape008_1.geometry}
+            material={materials["Material.029"]}
+          />
+        </group>
+      </RigidBody>
+    </group>
   );
 }
 
