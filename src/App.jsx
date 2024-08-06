@@ -5,7 +5,8 @@ import { Experience } from "./components/Experience";
 import { Physics } from "@react-three/rapier";
 import { Suspense, useMemo } from "react";
 import { KeyboardControls, Html } from "@react-three/drei";
-import { NewCarTowersScene } from "./components/NewCarTowersScene";
+//import { NewCarTowersScene } from "./components/NewCarTowersScene";
+import { NewCarScene } from "./components/NewCarScene";
 
 export const Controls = {
   forward: "forward",
@@ -49,7 +50,8 @@ function App() {
           <Suspense>
             <Physics gravity={[0, -35, 0]}>
               <Experience />
-              <NewCarTowersScene />
+              {/*<NewCarTowersScene />*/}
+              <NewCarScene />
             </Physics>
           </Suspense>
           <Html position={[0, 0, 0]}>

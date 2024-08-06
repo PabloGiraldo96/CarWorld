@@ -27,7 +27,7 @@ export function NewCarTowersScene(props) {
   const cameraWorldPosition = useRef(new THREE.Vector3());
   const cameraLookAtWorldPosition = useRef(new THREE.Vector3());
   const cameraLookAt = useRef(new THREE.Vector3());
-  const { camera } = useThree();
+  //const { camera } = useThree();
   const [initialPosition] = useState(new THREE.Vector3(-0.163, 0.566, -0.056));
   const [initialRotation] = useState(
     new THREE.Quaternion().setFromEuler(new THREE.Euler(0, 0, 0))
@@ -41,6 +41,7 @@ export function NewCarTowersScene(props) {
       car.setLinvel({ x: 0, y: 0, z: 0 }, true);
       car.setAngvel({ x: 0, y: 0, z: 0 }, true);
     }
+    soundStart.play(true);
   }, [initialPosition, initialRotation]);
 
   //IGNITION
