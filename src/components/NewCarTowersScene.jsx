@@ -80,6 +80,10 @@ export function NewCarTowersScene(props) {
 
     const car = carRef.current;
 
+    const animateMoveRight = () => {
+      car.applyTorqueImpulse({ x: 0, y: -torque, z: 0 });
+    };
+
     if (!car) return;
 
     const impulse = 1;
@@ -114,25 +118,21 @@ export function NewCarTowersScene(props) {
     if (controls.right) {
       car.applyTorqueImpulse({ x: 0, y: -torque, z: 0 });
     }
+    if (controls.back && controls.right) {
+      car.applyTorqueImpulse({ x: 0, y: torque, z: 0 });
+    }
+
     if (controls.jump) {
       car.applyImpulse({ x: 0, y: impulse, z: 0 });
     }
+
+    const animateMoveLeft = () => {
+      car.applyTorqueImpulse({ x: 0, y: torque, z: 0 });
+    };
+    const animateMoveBackwards = () => {
+      car.applyTorqueImpulse({ x: 0, y: torque, z: 0 });
+    };
   });
-
-  const accelerate = () => {
-    controls.forward = true;
-    controls.back = false;
-  };
-
-  const brake = () => {
-    controls.forward = false;
-    controls.back = true;
-  };
-
-  const stop = () => {
-    controls.forward = false;
-    controls.back = false;
-  };
 
   return (
     <group {...props} dispose={null}>
@@ -529,6 +529,14 @@ export function NewCarTowersScene(props) {
           />
         </group>
       </RigidBody>
+      <Html position={[0, 0, 0]}>
+        <div className="wasd">W S A D </div>
+        <div className="restart"> R to restart </div>
+        <button className="buttonUp">↑</button>
+        <button className="buttonRight">→</button>
+        <button className="buttonLeft">←</button>
+        <button className="buttonDown">↓</button>
+      </Html>
     </group>
   );
 }

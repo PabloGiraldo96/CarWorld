@@ -11,15 +11,9 @@ export const Experience = () => {
 
       <RigidBody position={[3, 5, 0]} colliders={"ball"}>
         <Sphere>
-          <meshStandardMaterial color="royalblue" />
+          <meshStandardMaterial color="white" />
         </Sphere>
       </RigidBody>
-
-      {/*<RigidBody type="fixed" restitution={0.1}>
-        <Box position={[0, 0, 0]} args={[10, 1, 10]}>
-          <meshStandardMaterial color="springgreen" />
-        </Box>
-      </RigidBody>*/}
     </>
   );
 };

@@ -7,6 +7,7 @@ import { Suspense, useMemo } from "react";
 import { KeyboardControls, Html } from "@react-three/drei";
 //import { NewCarTowersScene } from "./components/NewCarTowersScene";
 import { NewCarScene } from "./components/NewCarScene";
+import { Spinner } from "./components/Spinner";
 
 export const Controls = {
   forward: "forward",
@@ -46,19 +47,23 @@ function App() {
   return (
     <>
       <KeyboardControls map={map}>
-        <Canvas shadows camera={{ position: [2, 10, 15], fov: 50 }}>
-          <Suspense>
+        <Suspense fallback={<Spinner />}>
+          <Canvas shadows camera={{ position: [2, 10, 15], fov: 50 }}>
             <Physics gravity={[0, -35, 0]}>
               <Experience />
-              {/*<NewCarTowersScene />*/}
               <NewCarScene />
             </Physics>
-          </Suspense>
-          <Html position={[0, 0, 0]}>
-            <div className="wasd">W S A D </div>
-            <div className="restart"> R to restart </div>
-          </Html>
-        </Canvas>
+
+            <Html position={[0, 0, 0]}>
+              <div className="wasd">W S A D </div>
+              <div className="restart"> R to restart </div>
+              <button className="buttonUp">↑</button>
+              <button className="buttonRight">→</button>
+              <button className="buttonLeft">←</button>
+              <button className="buttonDown">↓</button>
+            </Html>
+          </Canvas>
+        </Suspense>
       </KeyboardControls>
     </>
   );
