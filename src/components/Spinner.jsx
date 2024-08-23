@@ -1,9 +1,15 @@
-import "./App.css";
+import { Canvas } from "@react-three/fiber";
+import "../assets/styles/Loading.css";
+import { Html } from "@react-three/drei";
 
 export const Spinner = () => {
   return (
-    <div className="spinner">
-      <div className="spinner__text">Loading</div>
-    </div>
+    <Canvas>
+      <Html>
+        <div className="lds-heart">
+          <div> </div>
+        </div>
+      </Html>
+    </Canvas>
   );
 };
