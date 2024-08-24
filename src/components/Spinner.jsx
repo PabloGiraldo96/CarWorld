@@ -6,9 +6,7 @@ export const Spinner = () => {
   return (
     <Canvas>
       <Html>
-        <div className="lds-heart">
-          <div> </div>
-        </div>
+        <div className="loader"></div>
       </Html>
     </Canvas>
   );
