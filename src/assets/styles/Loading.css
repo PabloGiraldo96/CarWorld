@@ -1,53 +1,32 @@
-.loader {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 6rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+.lds-dual-ring {
+  /* change color here */
+  color: #000000;
 }
-.loader:before,
-.loader:after {
-  content: "";
-  position: absolute;
+.lds-dual-ring,
+.lds-dual-ring:after {
+  box-sizing: border-box;
+}
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
   border-radius: 50%;
-  animation: pulsOut 1.8s ease-in-out infinite;
-  filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0.75));
+  border: 6.4px solid currentColor;
+  border-color: currentColor transparent currentColor transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
 }
-.loader:before {
-  width: 100%;
-  padding-bottom: 100%;
-  box-shadow: inset 0 0 0 1rem #fff;
-  animation-name: pulsIn;
-}
-.loader:after {
-  width: calc(100% - 2rem);
-  padding-bottom: calc(100% - 2rem);
-  box-shadow: 0 0 0 0 #fff;
-}
-
-@keyframes pulsIn {
+@keyframes lds-dual-ring {
   0% {
-    box-shadow: inset 0 0 0 1rem #fff;
-    opacity: 1;
-  }
-  50%,
-  100% {
-    box-shadow: inset 0 0 0 0 #fff;
-    opacity: 0;
-  }
-}
-
-@keyframes pulsOut {
-  0%,
-  50% {
-    box-shadow: 0 0 0 0 #fff;
-    opacity: 0;
+    transform: rotate(0deg);
   }
   100% {
-    box-shadow: 0 0 0 1rem #fff;
-    opacity: 1;
+    transform: rotate(360deg);
   }
 }
